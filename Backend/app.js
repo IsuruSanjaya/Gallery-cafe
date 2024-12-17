@@ -12,7 +12,7 @@ app.use(bodyParser.json({ limit: '10mb' })); // Adjust the limit as per your nee
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://isuru:1234@db01.lterdlp.mongodb.net/gallery', {
+mongoose.connect('', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('MongoDB Connected')).catch(err => console.log(err));
