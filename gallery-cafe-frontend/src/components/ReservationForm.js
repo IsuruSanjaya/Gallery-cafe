@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { ToastContainer, toast } from "react-toastify"; // For toast notifications
+import "react-toastify/dist/ReactToastify.css"; // Import toast CSS
 const ReservationForm = () => {
     const [formData, setFormData] = useState({
         name: '', // User ID field, ensure this is dynamic in a real app
@@ -21,11 +22,12 @@ const ReservationForm = () => {
         axios
             .post('http://localhost:5000/api/reservations/', formData)
             .then((response) => {
-                alert('Reservation successful!');
+      toast.success("Added Reservation successfully!");
                 console.log(response.data);
             })
             .catch((error) => {
                 alert('Error: ' + error.message);
+                toast.error("Error");
             });
     };
 

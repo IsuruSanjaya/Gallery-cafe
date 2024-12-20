@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../../src/Login.css'; // Optional for custom styles
-import 'react-toastify/dist/ReactToastify.css'; // Import toast CSS
+import { ToastContainer, toast } from "react-toastify"; // For toast notifications
+import "react-toastify/dist/ReactToastify.css"; // Import toast CSS
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -26,13 +27,19 @@ const LoginPage = () => {
       // Redirect users based on their role
       if (role === 'admin') {
         navigate('/home');
-      } else if (role === 'staff') {
+        toast.success("Login successfully")
+      } else if (role === 'operational') {
         navigate('/home');
+        toast.success("Login successfully")
+
       } else {
         navigate('/home');
+        toast.success("Login successfully")
+
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Invalid credentials');
+      toast.error("Invalid password")
     }
   };
   

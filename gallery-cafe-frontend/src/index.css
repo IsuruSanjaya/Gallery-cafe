@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 200px; /* Adjust based on footer height */
+
 
 }
 
@@ -78,7 +80,6 @@ code {
 }
 
 
-
 footer {
   position: fixed;
   bottom: 0;
@@ -88,4 +89,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
+  z-index: 10;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for visibility */
 }
+

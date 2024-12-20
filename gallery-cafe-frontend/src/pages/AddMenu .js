@@ -52,7 +52,7 @@ const AddMenu = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="container mt-4">
+        <><form onSubmit={handleSubmit} className="container mt-4">
             <h2>Add New Menu Item</h2>
             {/* Name Field */}
             <div className="mb-3">
@@ -64,8 +64,7 @@ const AddMenu = () => {
                     placeholder="Enter menu item name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
-                />
+                    required />
             </div>
             {/* Type Field */}
             <div className="mb-3">
@@ -77,8 +76,7 @@ const AddMenu = () => {
                     placeholder="Enter menu type (e.g., Appetizer, Main Course)"
                     value={formData.type}
                     onChange={handleChange}
-                    required
-                />
+                    required />
             </div>
             {/* Description Field */}
             <div className="mb-3">
@@ -102,8 +100,7 @@ const AddMenu = () => {
                     placeholder="Enter price in USD"
                     value={formData.price}
                     onChange={handleChange}
-                    required
-                />
+                    required />
             </div>
             {/* Image Field */}
             <div className="mb-3">
@@ -114,22 +111,24 @@ const AddMenu = () => {
                     className="form-control"
                     accept="image/*"
                     onChange={handleImageChange}
-                    required
-                />
+                    required />
                 {formData.image && (
                     <div className="mt-2">
                         <strong>Preview:</strong>
                         <img
                             src={formData.image}
                             alt="Preview"
-                            style={{ width: '200px', height: 'auto', marginTop: '10px' }}
-                        />
+                            style={{ width: '200px', height: 'auto', marginTop: '10px' }} />
                     </div>
                 )}
             </div>
             {/* Submit Button */}
             <button type="submit" className="btn btn-primary">Add Menu Item</button>
         </form>
+        <br></br>  
+        <br></br>  
+        <br></br>
+        <br></br></>
     );
 };
 

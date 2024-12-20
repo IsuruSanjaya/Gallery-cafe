@@ -3,6 +3,8 @@ body {
     background-size: cover;
     background-position: center;
     background-color: antiquewhite;
+    padding-bottom: 150px; /* Adjust based on footer height */
+
 }
 .modal-overlay {
     position: fixed;
@@ -51,4 +53,27 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for image */
+    object-fit: cover; /* Maintain image aspect ratio */
+}
+
+.card-body {
+    flex: 1; /* Fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align buttons at the bottom */
+    text-align: center; /* Center align content */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.card-text {
+    text-align: justify;
 }
